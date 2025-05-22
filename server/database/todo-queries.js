@@ -1,3 +1,4 @@
+//no longer used
 const knex = require("./connection.js");
 
 async function all() {

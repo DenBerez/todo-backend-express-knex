@@ -11,7 +11,7 @@ module.exports = {
     client: 'postgresql',
     connection: {
       database: process.env.PGDATABASE,
-      user:     process.env.PGUSER,
+      user: process.env.PGUSER,
       password: process.env.PGPASSWORD
     },
     pool: {
@@ -27,24 +27,25 @@ module.exports = {
     client: 'postgresql',
     connection: {
       database: process.env.PGDATABASE,
-      user:     process.env.PGUSER,
+      user: process.env.PGUSER,
       password: process.env.PGPASSWORD
     },
     pool: {
-      min: 2,
-      max: 10
+      min: 1,
+      max: 20
     },
     migrations: {
       tableName: 'knex_migrations'
-    }
+    },
+    debug: true
   },
 
   staging: {
     client: 'postgresql',
     connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
+      database: process.env.PGDATABASE,
+      user: process.env.PGUSER,
+      password: process.env.PGPASSWORD
     },
     pool: {
       min: 2,

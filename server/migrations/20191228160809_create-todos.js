@@ -1,6 +1,6 @@
-
-exports.up = function(knex) {
-    return knex.schema.createTable('todos', function(table) {
+//no longer used
+exports.up = function (knex) {
+    return knex.schema.createTable('todos', function (table) {
         table.increments('id');
         table.string('title');
         table.integer('order');
@@ -8,6 +8,6 @@ exports.up = function(knex) {
     });
 };
 
-exports.down = function(knex) {
+exports.down = function (knex) {
     return knex.schema.dropTable('todos');
 };
